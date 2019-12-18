@@ -1,0 +1,16 @@
+version: "3.2"
+
+services:
+  test:
+    image: busybox
+    command: docker stop postman
+    deploy:
+      mode: replicated
+      replicas: 0
+      labels:
+        - "swarm.cronjob.enable=true"
+        - "swarm.cronjob.schedule=45 23 * * 1-5"
+        - "swarm.cronjob.skip-running=false"
+      restart_policy:
+        condition: none
+

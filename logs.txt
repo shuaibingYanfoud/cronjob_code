@@ -1,0 +1,8 @@
+swarm_cronjob_app.1.z41pd1u9g535@localhost.localdomain    | Tue, 17 Dec 2019 16:18:00 CST INF Start job service=date_test status=paused tasks_active=0
+swarm_cronjob_app.1.z41pd1u9g535@localhost.localdomain    | Tue, 17 Dec 2019 16:18:00 CST INF Start job service=date1_test status=paused tasks_active=0
+swarm_cronjob_app.1.z41pd1u9g535@localhost.localdomain    | Tue, 17 Dec 2019 16:19:00 CST INF Start job service=date_test status=paused tasks_active=0
+//上面的是测试设置任务每分钟启动一次
+swarm_cronjob_app.1.z41pd1u9g535@localhost.localdomain    | Tue, 17 Dec 2019 23:45:00 CST INF Start job service=date1_test status= tasks_active=0
+swarm_cronjob_app.1.z41pd1u9g535@localhost.localdomain    | Wed, 18 Dec 2019 08:45:00 CST INF Start job service=date_test status= tasks_active=0
+//下面的设置date1于2019.12.17    23:45启动了关闭服务
+//date2于2019.12.18  08.45启动了服务

@@ -1,0 +1,15 @@
+version: "3.2"
+
+services:
+  test:
+    image: busybox
+    command: docker start e3ee
+    deploy:
+      mode: replicated
+      replicas: 0
+      labels:
+        - "swarm.cronjob.enable=true"
+        - "swarm.cronjob.schedule=45 8 * * 1-5"
+        - "swarm.cronjob.skip-running=false"
+      restart_policy:
+        condition: none
